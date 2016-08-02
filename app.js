@@ -9,6 +9,13 @@ app.get('/api/lyric', function(req, res) {
   res.send(lyr[selection]);
 });
 
+<<<<<<< HEAD
+=======
+// app.listen(3000, function() {
+//   console.log('Are we there yet?');
+// });
+
+>>>>>>> 3bf38a35d09df8e563ee7922f4b1c9f37760409f
 var server = app.listen(process.env.PORT || 5000, function() {
   var host = server.address().address;
   var port = server.address().port;
