@@ -1,3 +1,14 @@
 * {
   font-family: 'Archivo Narrow', sans-serif;
 }
+body {
+  background-image: url("music.jpg");
+  width: 100%;
+}
+
+#quote {
+  font-size: 36px;
+  font-style: italic;
+  padding: 50px 0 0 50px;
+  color: #ffffff;
+}
