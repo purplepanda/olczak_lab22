@@ -1,17 +1,12 @@
-//script.js, any js file that might perform AJAX operations
-// var lyric = '';
-var lyric = '';
+$(document).ready(function() {
+  var lyric = '';
 
-$.get('/api/lyrics', function(data) {
-  lyric = data;
-  var textInsert = document.getElementById("quote");
-  var textNode = document.createTextNode(lyric);
-  textInsert.appendChild(textNode);
-  console.log(lyric);
+  (function ajaxCall() {
+    $.get('/api/lyric', function(data) { //logic to display lyric on the page
+      lyric = data;
+      var $textInsert = $("#quote"); //create a jQuery variable of empty div
+      $textInsert.text(lyric); //append randomly generated lyric
+    });
+    setInterval(ajaxCall, 5000); //interval function
+  })();
 });
-//logic to display lyric on the page
-
-// app.get('/', function(req, res) {
-//   var selection = Math.floor(Math.random() * lyr.length);
-//   res.send(lyr[selection]);
-// });
